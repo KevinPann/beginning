@@ -1,0 +1,125 @@
+:root{
+    --header-backgroud: #22242A;
+    --title-color: rgb(255, 8, 8);
+    --title-color2: blue;
+    --sidebar-background:#23232e;
+    --sidebar-icons: #fff;
+    --sidebar-icons-hover: #df49a6;
+    --sidebar-icons-hover-background:#141418;
+    --sidebar-text-defult:#979494;
+    --sidebar-text-hover:#ececec;
+    --transition-speed: 700ms;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+.tittle{
+    display: none;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    background: var(--sidebar-icons-hover-background);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+}
+
+.tittle h3{
+    display: none;
+    transition: var(--transition-speed); 
+}
+.sidebar:hover .tittle h3{
+    display: block;
+    border-bottom: solid .1rem var(--sidebar-icons-hover);
+}
+.tittle i{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    font-size: 4rem;
+    transform: rotate(0deg);
+    transition: var(--transition-speed); 
+}
+
+.sidebar:hover > .tittle i {
+    color: var(--sidebar-icons-hover);
+
+    transform: rotate(180deg);
+    margin-left: .5rem;
+    
+    opacity:1;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--sidebar-background);
+    position: fixed;
+    align-items: center;
+}
+
+.title-box{
+    display: flex;
+    
+}
+.icon{
+    padding-right: 1rem;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: var(--transition-speed); 
+}
+
+.links a{
+    display: flex;
+    justify-content: center;
+    color: var(--sidebar-icons);
+    text-decoration: none;
+    /* s how the total width and height of an element is calculated. */
+    box-sizing: border-box;
+    color: var(--sidebar-text-defult);
+    font-size: 1.5rem;
+    /* temp */
+    /* margin-top: 50%; */
+    line-height:  4rem;
+    /* padding-left:  2rem; */
+    /* padding-right: 2.5rem;   */
+    margin-top: 2rem;
+    transition: var(--transition-speed); 
+
+}
+.links span{
+    display: none;
+    transition: var(--transition-speed); 
+}
+.sidebar:hover .links span{
+    display: block; 
+     
+}
+.sidebar:hover .links a{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding-left: 0rem;
+    opacity:1;
+}
+.links a:hover{
+    filter: grayscale(0%) opacity(1);
+    background: var(--sidebar-icons-hover-background);
+    color: var(--sidebar-text-hover);
+}
+.links a:hover > .icon{
+    color: var(--sidebar-icons-hover);
+    transition: var(--transition-speed);   
+}
+@media only screen and (max-width: 600px)(
+    
+)
