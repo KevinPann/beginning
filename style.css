@@ -64,6 +64,7 @@ nav a {
   width: 100%;
   color: var(--sidebar-text-hover);
   background: var(--sidebar-icons-hover-background);
+  white-space: nowrap;
 }
 .title i {
   transform: rotate(0deg);
@@ -91,7 +92,12 @@ nav a {
   background-color: var(--sidebar-icons-hover-background);
   transition: var(--transition-speed);
 }
-
+/* .only-child-in-a-row {
+  margin-top: auto;
+} */
+.navbar-nav:last-child {
+  margin-top: auto;
+}
 body::-webkit-scrollbar {
   width: 0.25rem;
 }
